@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/cart.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/overlay.css" />
+    <link rel="stylesheet" href="../css//footer.css">
+    <link rel="stylesheet" href="../css/master.css">
+    <link
+    rel="shortcut icon"
+    href="https://img.icons8.com/emoji/48/000000/wrapped-gift.png"
+    type="image/x-icon"
+  />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="https://img.icons8.com/emoji/48/000000/wrapped-gift.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Exo:wght@300&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="./img/Logo.jpg" type="image/x-icon" style="border-radius: 50%;">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Festive&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content"
+              aria-controls="navbar-content" aria-expanded="false" aria-label="toggle-navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar-content">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link" href="../index.html">Home</a>
+                  </li>
+                  <!-- <li class="nav-item">
+                      <a class="nav-link" href="#gallary">Services</a>
+                  </li> -->
+                  <li class="nav-item">
+                      <a class="nav-link" href="./products.html">Products</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#rodape">Contacts</a>
+                  </li>
+                  <li class="nav-item links" id="Cart">
+                      <a class="nav-link" href="../views/cart.html"><i class="fas fa-shopping-cart"></i> <span class="cartCounter"
+                              id="cart">0</span>
+                      </a>
+                  </li>
+
+              </ul>
+          </div>
+      </nav>
+      <div class="box">
+          <div class="box-1"></div>
+          <div class="box-2"></div>
+      </div>
+  </header>
+  <hr style="height: 200px;">
+    <main>
+      <div class="break"></div>
+
+    <div id="overlay" >
+      <div class='container' >
+          <div class='window'">
+            <div class='order-info'>
+              <div class='order-info-content'>
+                <h2><i class="fa fa-shopping-cart"></i>  <span class="CartCounter">0</span></h2>
+                <h2>Order Summary </h2>
+                        <div class='line'></div>
+                  <div>
+                    <table id="checkoutInfo">
+      
+                    </table>
+                  </div>
+                  <div class='line'></div>
+                  <p>Total : <span class="TotalPrice">0</span> JD </p>
+        </div>
+        </div>
+                <div class='credit-info'>
+                  <div class='credit-info-content'>
+                    <table class='half-input-table'>
+                      <tr><td>Please select your card: </td><td><div class='dropdown' id='card-dropdown'><div class='dropdown-btn' id='current-card'>Visa</div>
+                        <span id="CloseForm" onclick="off()">✖</span>
+                        <div class='dropdown-select'>
+                        <ul>
+                          <li>Master Card</li>
+                          <li>American Express</li>
+                          </ul></div>
+                        </div>
+                       </td></tr>
+                    </table>
+                    <form id="payForm">
+                    <img src='https://dl.dropboxusercontent.com/s/ubamyu6mzov5c80/visa_logo%20%281%29.png' height='80' class='credit-card-image' id='credit-card-image'></img>
+                    Card Number
+                    <input class='input-field'  required type="number"></input>
+                    Card Holder
+                    <input class='input-field' required></input>
+                    <table class='half-input-table'>
+                      <tr>
+                        <td> Expires
+                          <input class='input-field'required type="number"> </input>
+                        </td>
+                        <td>CVC
+                          <input class='input-field'required type="number"></input>
+                        </td>
+                      </tr>
+                    </table>
+                  </form>
+                    <button  onclick="CorrectOn()" class='pay-btn'>Checkout</button>
+                  
+                  </div>
+        
+                </div>
+              </div>
+            </div>
+            
+    </div>
+    <div id="CorectOverlay" >
+      <div class='CorectContainer'onclick="off()" >
+          <div class='CorectWindow'">
+  
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+              <circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
+              <polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "/>
+  
+            </svg>
+            <p class="success">Payment Successful!</p>
+  
+              </div>
+              
+            </div>
+            
+    </div>
+    
+      <div class="products-list">
+        <div class="plist"></div>
+      </div>
+        <div id="Total">
+          <p>
+            Subtotal (<span class="CartCounter">0</span> items):
+            <span class="TotalPrice">0</span> RS
+          </p>
+          <button onclick="on()" id="checkout">
+            Proceed to checkout
+          </button>
+        </div>
+
+    </main>
+    <footer class="rodape" id="rodape">
+      <ul class="redes">
+          <li data-text="Facebook"><a target="blanck" class="facebook" href="#"><i class="fa fa-facebook"
+                      aria-hidden="true"></i></a></li>
+          <li data-text="Instagram"><a target="blanck" class="instagram" href="#"><i class="fa fa-instagram"
+                      aria-hidden="true"></i></a></li>
+          <li data-text="Twitter"><a target="blanck" class="twitter" href="#"><i class="fa fa-twitter"
+                      aria-hidden="true"></i></a></li>
+          <li data-text="Youtube"><a target="blanck" class="youtube" href="#"><i class="fa fa-youtube"
+                      aria-hidden="true"></i></a></li>
+          <li data-text="Linkedin"><a target="blanck" class="linkedin" href="#"><i class="fa fa-linkedin"
+                      aria-hidden="true"></i></a></li>
+          <li data-text="Githube"><a target="blanck" class="githube" href="#"><i class="fa fa-github"
+                      aria-hidden="true"></i></a></li>
+          <li data-text="Codepen"><a target="blanck" class="codepen" href="#"><i class="fa fa-codepen"
+                      aria-hidden="true"></i></a></li>
+      </ul>
+  </footer>
+    <script src="../js/app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/bc2402e035.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/cart.js"></script>
+
+  </body>
+</html>
